@@ -21,3 +21,14 @@ const DatesToSelect = [
         date: '26 June 2021'
     },
 ]
+
+function GetDifference(date){
+    const currentDate = new Date();
+    const countDownDate =new Date(date);
+    const difference = countDownDate - currentDate;
+    return difference;
+}
+
+
+//console.log(DatesToSelect[0].date);
+console.log(GetDifference(DatesToSelect[0].date));
