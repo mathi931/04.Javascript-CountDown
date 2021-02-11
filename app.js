@@ -1,9 +1,8 @@
-
 const DatesToSelect = [
     {
         id: 0,
         name: 'Tomorrowland',
-        date: '16 July 2021'
+        date: '16 Jul 2021'
     },
     {
         id: 1,
@@ -22,13 +21,34 @@ const DatesToSelect = [
     },
 ]
 
-function GetDifference(date){
-    const currentDate = new Date();
+function Countdown(date){
+    document.getElementById('days').innerHTML = GetDifferenceInDays(GetTotalDifferenceSec(date));
+    document.getElementById('hours').innerHTML = GetDifferenceInHours(GetTotalDifferenceSec(date));
+    document.getElementById('minutes').innerHTML = GetDifferenceInMinutes(GetTotalDifferenceSec(date));
+    document.getElementById('seconds').innerHTML = GetDifferenceInSeconds(GetTotalDifferenceSec(date));
+    }
+function GetTotalDifferenceSec(date){
+    const currentDate = new Date().getTime();
     const countDownDate =new Date(date);
-    const difference = countDownDate - currentDate;
-    return difference;
+    return (countDownDate - currentDate) / 1000;
+    }
+function GetDifferenceInDays(dif){
+    return Math.floor(dif / 3600 /24);
+    
+}
+function GetDifferenceInHours(dif){
+    return Math.floor(dif / 3600) % 24;
+    
+}
+function GetDifferenceInMinutes(dif){
+    return Math.floor(dif / 60) % 60;
+    
+}
+function GetDifferenceInSeconds(dif){
+    return Math.floor(dif) %60;
+   
 }
 
-
-//console.log(DatesToSelect[0].date);
-console.log(GetDifference(DatesToSelect[0].date));
+setInterval(function(){
+    Countdown(DatesToSelect[1].date)
+} ,1000);
