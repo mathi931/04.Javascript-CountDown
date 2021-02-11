@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+	background-image: url('./background.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.input-container {
+	margin-top: -10rem;
+	margin-bottom: 15rem;
+	font-family: 'Hammersmith One', sans-serif;
+	color: #ffe77aff;
+}
+
+h1 {
+	font-size: 2.5rem;
+	text-shadow: 2px 2px #7a4f0f;
+}
+select {
+	margin-left: 7rem;
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: 1.4rem;
+	color: #7a4f0f;
+	text-shadow: 0.5px 0.5px #6e5b40;
+	border-radius: 3px;
+    border: 1px solid #6e5b40;
+	padding: 1.5px;
+    background: none;
+    outline: none;
+}
+select option{
+    border: 1px solid #fff;
+   
+    padding: 5px;
+}
+.options{
+    background-color:#D8F098;
+
+}
+button {
+    margin-left: 10rem;
+    margin-top:2px;
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: 1.4rem;
+    background: none;
+	color: #7a4f0f;
+	text-shadow: 0.5px 0.5px #6e5b40;
+	border-radius: 3px;
+	border: 1px solid ;
+	display: flex;
+	padding: 2px;
+}
+
+.countdown-container {
+	display: flex;
+	color: #ffe77aff;
+    border: 1px solid;
+}
+.num-text {
+	font-size: 5rem;
+	font-family: 'Righteous', cursive;
+	margin: 0 1.5rem;
+	color: #ffe77aff;
+	text-shadow: 0.5px 0.5px #6e5b40;
+}
+.num-container {
+	text-align: center;
+}
+span {
+	text-shadow: 1px 1px bronw;
+	font-family: 'Niconne', cursive;
+	font-size: 1.5rem;
+}
