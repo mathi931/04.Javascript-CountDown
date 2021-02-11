@@ -31,6 +31,10 @@ select {
 .countdown-container {
 	display: flex;
 	color: #ffe77aff;
+}
+.countdown-container-border {
+	display: flex;
+	color: #ffe77aff;
 	border: 1px solid;
 }
 .num-text {
