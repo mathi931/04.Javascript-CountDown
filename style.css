@@ -13,61 +13,30 @@ body {
 	background-size: cover;
 	background-position: center;
 }
-.input-container {
-	margin-top: -10rem;
-	margin-bottom: 15rem;
-	font-family: 'Hammersmith One', sans-serif;
-	color: #ffe77aff;
-}
-
-h1 {
-	font-size: 2.5rem;
-	text-shadow: 2px 2px #7a4f0f;
-}
 select {
-	margin-left: 7rem;
+	margin-top: -10rem;
 	font-family: 'Hammersmith One', sans-serif;
 	font-size: 1.4rem;
 	color: #7a4f0f;
 	text-shadow: 0.5px 0.5px #6e5b40;
 	border-radius: 3px;
-    border: 1px solid #6e5b40;
+	border: 1px solid #6e5b40;
 	padding: 1.5px;
-    background: none;
-    outline: none;
+	background: none;
+	outline: none;
 }
-select option{
-    border: 1px solid #fff;
-   
-    padding: 5px;
+.options {
+	background-color: rgb(245, 229, 160);
 }
-.options{
-    background-color:#D8F098;
-
-}
-button {
-    margin-left: 10rem;
-    margin-top:2px;
-	font-family: 'Hammersmith One', sans-serif;
-	font-size: 1.4rem;
-    background: none;
-	color: #7a4f0f;
-	text-shadow: 0.5px 0.5px #6e5b40;
-	border-radius: 3px;
-	border: 1px solid ;
-	display: flex;
-	padding: 2px;
-}
-
 .countdown-container {
 	display: flex;
 	color: #ffe77aff;
-    border: 1px solid;
+	border: 1px solid;
 }
 .num-text {
-	font-size: 5rem;
+	font-size: 4rem;
 	font-family: 'Righteous', cursive;
-	margin: 0 1.5rem;
+	margin: 0 1rem;
 	color: #ffe77aff;
 	text-shadow: 0.5px 0.5px #6e5b40;
 }
@@ -75,7 +44,7 @@ button {
 	text-align: center;
 }
 span {
-	text-shadow: 1px 1px bronw;
+	text-shadow: 1px 1px brown;
 	font-family: 'Niconne', cursive;
 	font-size: 1.5rem;
 }
