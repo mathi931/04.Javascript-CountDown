@@ -42,10 +42,10 @@ dropDown.addEventListener('change', function (e){
 
 //Load values and elements
 function LoadValues(date){
-    document.getElementById('days').innerHTML = GetDifferenceInDays(GetTotalDifferenceSec(date));
-    document.getElementById('hours').innerHTML = GetDifferenceInHours(GetTotalDifferenceSec(date));
-    document.getElementById('minutes').innerHTML = GetDifferenceInMinutes(GetTotalDifferenceSec(date));
-    document.getElementById('seconds').innerHTML = GetDifferenceInSeconds(GetTotalDifferenceSec(date));
+    document.getElementById('days').innerHTML = FormatTime(GetDifferenceInDays(GetTotalDifferenceSec(date)));
+    document.getElementById('hours').innerHTML = FormatTime(GetDifferenceInHours(GetTotalDifferenceSec(date)));
+    document.getElementById('minutes').innerHTML = FormatTime(GetDifferenceInMinutes(GetTotalDifferenceSec(date)));
+    document.getElementById('seconds').innerHTML = FormatTime(GetDifferenceInSeconds(GetTotalDifferenceSec(date)));
     }
 function LoadElements(){
         const spans = document.querySelectorAll('span');
@@ -56,6 +56,11 @@ function LoadElements(){
         spans[3].innerHTML = 'seconds';
         
     }
+
+//format value
+function FormatTime(time){
+    return time < 10 ? (`0${time}`) : time;
+}
 
 //Get the values
 function GetTotalDifferenceSec(date){
