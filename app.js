@@ -20,7 +20,19 @@ const DatesToSelect = [
         date: '26 June 2021'
     },
 ]
+const dropDown = document.getElementById('selector');
+let iarr = [];
 
+dropDown.addEventListener('change', function (e){
+    //save the current index
+    iarr.push(e.target.value);
+    //clear the last index to stop the loop
+    clearInterval(iarr[iarr.length-1]);
+    //start the loop
+    setInterval(function(){
+    Countdown(DatesToSelect[e.target.value].date)
+} ,1000);
+});
 function Countdown(date){
     document.getElementById('days').innerHTML = GetDifferenceInDays(GetTotalDifferenceSec(date));
     document.getElementById('hours').innerHTML = GetDifferenceInHours(GetTotalDifferenceSec(date));
@@ -48,7 +60,3 @@ function GetDifferenceInSeconds(dif){
     return Math.floor(dif) %60;
    
 }
-
-setInterval(function(){
-    Countdown(DatesToSelect[1].date)
-} ,1000);
